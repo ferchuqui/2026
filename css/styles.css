@@ -1,5 +1,8 @@
+
 body {
     font-family: 'Roboto', sans-serif;
+    min-width: 320px; /* El tamaño mínimo de un dispositivo móvil en píxeles */
+    background-color: #FEC31F
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -12,9 +15,10 @@ p, a, li, span {
 }
 
 .logo {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
+    margin-right: 20px
 }
 
 .jumbotron {
@@ -25,4 +29,26 @@ p, a, li, span {
 footer {
     background-color: #f8f9fa;
     margin-top: 30px;
+}
+/* Estilo del navbar */
+.navbar {
+    background-color: #FEC31F !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 0;
+    margin-bottom: 0;
+    
+}
+
+.navbar-brand {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.nav-link {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+.nav-link:hover {
+    color: #ff5733 !important; /* Cambia a tu color preferido */
 }
