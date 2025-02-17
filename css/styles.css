@@ -21,6 +21,14 @@ p, a, li, span {
     margin-right: 20px
 }
 
+.modal-content.rounded {
+    border-radius: 15px; /* Ajusta el valor según tus necesidades */
+}
+
+.btn {
+    border-radius: 15px; /* Ajusta el valor según tus necesidades */
+}
+
 .jumbotron {
     background-color: #f8f9fa;
     margin-bottom: 0;
@@ -51,4 +59,57 @@ footer {
 }
 .nav-link:hover {
     color: #ff5733 !important; /* Cambia a tu color preferido */
+}
+
+/* Section */
+
+.content-section {
+    /* background-color: red; */
+    padding: 20px;
+    position: relative;
+    display: flex
+}
+
+.text-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    height: 100%; /* Asegúrate de que la altura sea 100% para centrar verticalmente */
+}
+.text-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #000;
+}    
+
+.text-section p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.video-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.video-section video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.vertical-button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    transform-origin: right top;
+    margin-right: -20px;
+    background-color: red;
 }
