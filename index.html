@@ -3,106 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>www.2026.com.ar</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <title>2026.com.ar - Diseñamos el futuro, hoy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+        }
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                        url('https://picsum.photos/1920/1080?webdesign') center/cover;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+        }
+        .services i {
+            font-size: 3rem;
+            color: #0d6efd;
+        }
+        .portfolio img {
+            border-radius: 8px;
+        }
+        footer {
+            background-color: #0d6efd;
+            color: white;
+            padding: 20px 0;
+        }
+    </style>
 </head>
 <body>
-    <div class="container-fluid">
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-        <a class="navbar-brand" href="#">
-            <img src="img/logo.png" alt="Logo" class="logo">
-            2026.com.ar
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">2026.com.ar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Sobre Nosotros</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Portafolio</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                <li class="nav-item"><a class="nav-link" href="#portafolio">Portafolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#precios">Precios</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
             </ul>
         </div>
-    </nav>
-
-<!-- Inicio modal -->
- <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content rounded">
-      <div class="modal-header">
-        <h5 class="modal-title" id=""exampleModalLabel>Tus sellos Escolares en el dia</h5>
-        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <img src="img/sellosescolares.png" alt="oferta del mes" class="img-fluid">
-            Sello  escolar a $17000
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            <button type="button" class="btn btn-primary">Comprar</button>
-          </div>
-      </div>
     </div>
-  </div> 
+</nav>
 
-
-  <section class="content-section">
-    <div class="row">
-      <div class="col-md-6 text-section centered-div">
-        <h2>Transforma tu idea en una realidad digital</h2>
-        <p>Los clientes te buscan, te encuentran, te contactan.. Vendes. Fácil y rápido</p>
-        <p>Tu negocio Online empieza Aquí</p>
-        <button class="btn btn-primary" type="button">Vamos</button>
-      </div>
-      <div class="col-md-6 video-section">
-        <video controls>
-          <source src="img/video.mp4" type="video/mp4">
-          Tu navegador no soporta el video
-        </video>
-        
-      </div>
+<section id="inicio" class="hero">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Diseñamos el futuro, hoy</h1>
+        <p class="lead">Páginas web modernas, rápidas y efectivas para que tu negocio esté listo para el 2026.</p>
+        <a href="#contacto" class="btn btn-lg btn-light mt-3">Solicita tu página</a>
     </div>
-    <button class="btn btn-secondary vertical-button">Cotizar</button>
-  </section>
+</section>
 
+<section id="servicios" class="py-5 services">
+    <div class="container">
+        <h2 class="text-center mb-4">Nuestros Servicios</h2>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <i class="bi bi-laptop"></i>
+                <h4 class="mt-3">Diseño Web Personalizado</h4>
+                <p>Desarrollamos sitios a medida, adaptados a tu identidad de marca.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="bi bi-cart"></i>
+                <h4 class="mt-3">Tiendas Online</h4>
+                <p>Plataformas de e-commerce fáciles de usar y seguras.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="bi bi-bar-chart"></i>
+                <h4 class="mt-3">Optimización SEO</h4>
+                <p>Mejoramos tu visibilidad en Google para atraer más clientes.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
+<section id="portafolio" class="py-5 portfolio bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Portafolio</h2>
+        <div class="row g-4">
+            <div class="col-md-4"><img src="https://picsum.photos/600/400?1" class="img-fluid"></div>
+            <div class="col-md-4"><img src="https://picsum.photos/600/400?2" class="img-fluid"></div>
+            <div class="col-md-4"><img src="https://picsum.photos/600/400?3" class="img-fluid"></div>
+        </div>
+    </div>
+</section>
 
+<section id="precios" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Planes y Precios</h2>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h4>Plan Básico</h4>
+                        <p class="display-6">desde <br>$20000 al mes</p>
+                        <ul class="list-unstyled">
+                            <li>1 página</li>
+                            <li>Hosting y dominio 1 año</li>
+                            <li>Diseño adaptable</li>
+                        </ul>
+                        <a href="#contacto" class="btn btn-primary">Elegir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm border-primary">
+                    <div class="card-body">
+                        <h4>Plan Profesional</h4>
+                        <p class="display-6">desde <br>$40000 al mes</p>
+                        <ul class="list-unstyled">
+                            <li>Hasta 5 páginas</li>
+                            <li>Hosting y dominio 1 año</li>
+                            <li>Optimización SEO</li>
+                        </ul>
+                        <a href="#contacto" class="btn btn-primary">Elegir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h4>Plan Premium</h4>
+                        <p class="display-6">desde <br>$80000 al mes</p>
+                        <ul class="list-unstyled">
+                            <li>Páginas ilimitadas</li>
+                            <li>Hosting y dominio 1 año</li>
+                            <li>Soporte prioritario</li>
+                        </ul>
+                        <a href="#contacto" class="btn btn-primary">Elegir</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
+<section id="contacto" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Contacto</h2>
+        <form class="mx-auto" style="max-width: 600px;">
+            <div class="mb-3">
+                <label class="form-label">Nombre</label>
+                <input type="text" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Correo</label>
+                <input type="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Mensaje</label>
+                <textarea class="form-control" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Enviar</button>
+        </form>
+    </div>
+</section>
 
-</div> <!-- Fin container -->
+<footer class="text-center">
+    <p class="mb-0">&copy; 2025 2026.com.ar - Todos los derechos reservados</p>
+</footer>
 
-<!-- Fin modal -->
-
-<!--     <header class="jumbotron text-center">
-        <h1 class="display-4">Bienvenido a www.2026.com.ar</h1>
-        <p class="lead">Tu empresa de diseño de páginas web.</p>
-    </header> -->
-
-
-
-    <section class="container">
-        <!-- Sección de contenido -->
-    </section>
-
-    <footer class="bg-light text-center py-4">
-        <p>&copy; 2025 www..com.ar. Todos los derechos reservados.</p>
-    </footer>
-
-<!-- jQuery y Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src="js/script.js"></script>
-
-</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
