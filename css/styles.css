@@ -25,6 +25,18 @@ p, a, li, span {
     border-radius: 15px; /* Ajusta el valor según tus necesidades */
 }
 
+.modal-content {
+    border: none; /* Elimina los bordes del modal */
+    border-radius: 0; /* Elimina los bordes redondeados si es necesario */
+}
+.close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 1051;
+
+}
+
 .btn {
     border-radius: 15px; /* Ajusta el valor según tus necesidades */
 }
@@ -102,6 +114,7 @@ footer {
     max-width: 100%;
     height: auto;
     border-radius: 20px;
+    width: 80%
 }
 
 .vertical-button {
