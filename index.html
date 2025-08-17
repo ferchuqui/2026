@@ -10,32 +10,29 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container">
-        <a class="navbar-brand fw-bold" href="#">2026.com.ar</a>
-        <button 
-  class="navbar-toggler" 
-  type="button" 
-  data-bs-toggle="collapse" 
-  data-bs-target="#navbarNav" 
-  aria-controls="navbarNav" 
-  aria-expanded="false" 
-  aria-label="Abrir menú de navegación">
-  <span class="navbar-toggler-icon"></span>
-</button>
-                data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
-                <li class="nav-item"><a class="nav-link" href="#portafolio">Portafolio</a></li>
-                <li class="nav-item"><a class="nav-link" href="#precios">Precios</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-            </ul>
-        </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+  <div class="container">
+    <!-- Logo + Texto -->
+    <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+      <img src="img/logo.png" alt="Logo 2026" width="40" height="40" class="me-2">
+      2026.com.ar
+    </a>
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#hero">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#portafolio">Portafolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+      </ul>
     </div>
+  </div>
 </nav>
 
 <section id="inicio" class="hero">
@@ -73,9 +70,9 @@
     <div class="container">
         <h2 class="text-center mb-4">Portafolio</h2>
         <div class="row g-4">
-            <div class="col-md-4"><img src="https://picsum.photos/600/400?1" alt="Imagen 1" class="img-fluid"></div>
-            <div class="col-md-4"><img src="https://picsum.photos/600/400?2" alt="Imagen 2" class="img-fluid"></div>
-            <div class="col-md-4"><img src="https://picsum.photos/600/400?3" alt="Imagen 3"class="img-fluid"></div>
+            <div class="col-md-4"><img src="img/487-600x400.jpg" alt="Campo con hierbas silvestres" class="img-fluid"></div>
+            <div class="col-md-4"><img src="img/500-600x400.jpg" alt="Rascacielos bajo el cielo" class="img-fluid"></div>
+            <div class="col-md-4"><img src="img/579-600x400.jpg" alt="Ciudad iluminada de noche" class="img-fluid"></div>
         </div>
     </div>
 </section>
