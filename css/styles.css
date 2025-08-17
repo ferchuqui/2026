@@ -1,128 +1,25 @@
-
-body {
-    font-family: 'Roboto', sans-serif;
-    min-width: 320px; /* El tamaño mínimo de un dispositivo móvil en píxeles */
-    background-color: #FEC31F
+.form-box {
+  max-width: 600px;
 }
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700; /* Puedes ajustar el peso según tus preferencias */
-}
-
-p, a, li, span {
-    font-family: 'Roboto', sans-serif;
-}
-
-.logo {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-right: 20px
-}
-
-.modal-content.rounded {
-    border-radius: 15px; /* Ajusta el valor según tus necesidades */
-}
-
-.modal-content {
-    border: none; /* Elimina los bordes del modal */
-    border-radius: 0; /* Elimina los bordes redondeados si es necesario */
-}
-.close {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    z-index: 1051;
-
-}
-
-.btn {
-    border-radius: 15px; /* Ajusta el valor según tus necesidades */
-}
-
-.jumbotron {
-    background-color: #f8f9fa;
-    margin-bottom: 0;
-}
-
-footer {
-    background-color: #f8f9fa;
-    margin-top: 30px;
-}
-/* Estilo del navbar */
-.navbar {
-    background-color: #FEC31F !important;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-top: 0;
-    margin-bottom: 0;
-    
-}
-
-.navbar-brand {
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-}
-
-.nav-link {
-    font-family: 'Roboto', sans-serif;
-    color: black;
-}
-.nav-link:hover {
-    color: #ff5733 !important; /* Cambia a tu color preferido */
-}
-
-/* Section */
-
-.content-section {
-    /* background-color: red; */
-    padding: 20px;
-    position: relative;
-    display: flex
-}
-
-.text-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; /* Centra el contenido horizontalmente */
-    text-align: center;
-    padding: 20px;
-    color: #fff;
-    height: 100%; /* Asegúrate de que la altura sea 100% para centrar verticalmente */
-}
-.text-section h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    color: #000;
-}    
-
-.text-section p {
-    font-family: 'Montserrat', sans-serif;
-}
-
-
-.video-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-.video-section video {
-    max-width: 100%;
-    height: auto;
-    border-radius: 20px;
-    width: 80%
-}
-
-.vertical-button {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%) rotate(90deg);
-    transform-origin: right top;
-    margin-right: -20px;
-    background-color: red;
-}
+        body {
+            font-family: 'Segoe UI', sans-serif;
+        }
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                        url('https://picsum.photos/1920/1080?webdesign') center/cover;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+        }
+        .services i {
+            font-size: 3rem;
+            color: #0d6efd;
+        }
+        .portfolio img {
+            border-radius: 8px;
+        }
+        footer {
+            background-color: #0d6efd;
+            color: white;
+            padding: 20px 0;
+        }
