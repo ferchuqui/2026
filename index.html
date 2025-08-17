@@ -147,21 +147,21 @@
 <section id="contacto" class="py-5 bg-light">
     <div class="container">
         <h2 class="text-center mb-4">Contacto</h2>
-        <form class="mx-auto" style="max-width: 600px;">
-            <div class="mb-3">
-                <label class="form-label">Nombre</label>
-                <input type="text" class="form-control" required>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Correo</label>
-                <input type="email" class="form-control" required>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Mensaje</label>
-                <textarea class="form-control" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Enviar</button>
-        </form>
+            <form action="https://formspree.io/f/mblkeylz" method="POST" class="mx-auto" style="max-width: 600px;">
+                <div class="mb-3">
+                    <label class="form-label">Nombre</label>
+                    <input type="text" class="form-control" name="nombre" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Correo</label>
+                    <input type="email" class="form-control" name="correo" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Mensaje</label>
+                    <textarea class="form-control" name="mensaje" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Enviar</button>
+            </form>
     </div>
 </section>
 
