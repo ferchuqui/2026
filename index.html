@@ -1,262 +1,366 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026.com.ar - Diseño Web, Tiendas Online y SEO en Argentina</title>
-    <meta name="description" content="2026.com.ar ofrece diseño web moderno, tiendas online seguras y optimización SEO en Argentina. ¡Prepárate para el futuro digital con soluciones efectivas para tu negocio en 2026!">
-    <meta name="keywords" content="diseño web Argentina, tiendas online, SEO, páginas web 2026, desarrollo web profesional, e-commerce, optimización Google">
-    <meta name="author" content="2026.com.ar">
-    <link rel="icon" type="image/png" href="img/logo.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BGJ797HV85"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-BGJ797HV85');
-    </script>
+    <title>2026.com.ar | Sellos de Goma Personalizados y Escolares</title>
+    <meta name="description" content="Líderes en fabricación de sellos de goma en Argentina. Sellos automáticos para profesionales, sellos de madera y kits escolares personalizados con tinta textil.">
+    <meta name="keywords" content="sellos de goma, sellos personalizados, 2026.com.ar, sellos escolares, sellos automáticos, sellos para ropa, sellos buenos aires">
+    
+    <link rel="icon" href="images/logo.png" type="image/png">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MGL2TKBP');</script>
+<!-- End Google Tag Manager --> 
+
+    <style>
+        :root {
+            --primary-blue: #0056b3;
+            --whatsapp-green: #25d366;
+            --school-yellow: #ffc107;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Hero Section */
+        .hero-container {
+            position: relative;
+            height: 90vh;
+            /* Degradado oscuro sobre la imagen para que se lea el texto */
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('images/sellos.jpeg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 800;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        /* Tarjetas de Producto */
+        .transition-hover {
+            transition: all 0.3s ease;
+            border-top: 5px solid transparent;
+        }
+        .transition-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+            border-top: 5px solid var(--primary-blue);
+        }
+
+        /* WhatsApp Flotante */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--whatsapp-green);
+            color: white;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); color: white; }
+
+        /* FAQ Estilo */
+        .accordion-button:not(.collapsed) { background-color: #e7f1ff; color: var(--primary-blue); }
+        .accordion-item { border-radius: 10px !important; margin-bottom: 10px; border: 1px solid #eee; overflow: hidden; }
+
+        /* Corrección Carrusel para Móviles */
+        .carousel-inner { height: 400px; }
+        
+        @media (max-width: 768px) {
+            .carousel-inner { 
+                height: 300px; /* Altura ajustada para celulares */
+            }
+            .hero-container {
+                height: 80vh; /* Un poco más corto en móviles */
+            }
+        }
+    </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-  <div class="container">
-    <!-- Logo + Texto -->
-    <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
-      <img src="img/logo.png" alt="Logo 2026" width="40" height="40" class="me-2">
-      2026.com.ar
+    
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGL2TKBP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+                <img src="images/logo.png" alt="Logo" height="30" class="me-2">
+                2026<span class="text-primary">.COM.AR</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kit-escolar">Sello escolar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    <li class="nav-item d-none d-lg-block">
+                        <a href="https://wa.me/+5491138092992" class="btn btn-outline-primary ms-3">WhatsApp</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-container">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-center mb-3">
+                <h1 class="hero-title mb-0">Sellos que dejan huella.</h1>
+            </div>
+            <p class="lead fs-4 mb-4">Especialistas en sellos de goma para empresas y sellos escolares personalizados.</p>
+            <div class="d-grid gap-3 d-md-block">
+                <a href="#productos" class="btn btn-primary btn-lg px-5 py-3 fw-bold shadow">VER CATÁLOGO</a>
+                <a href="#contacto" class="btn btn-outline-light btn-lg px-5 py-3 fw-bold">CONTACTAR</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="productos" class="py-5 bg-white">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold h1">Nuestros Productos</h2>
+                <div class="mx-auto bg-primary mb-3" style="width: 60px; height: 4px;"></div>
+                <p class="text-muted">Personalizá tu sello hoy mismo con la mejor tecnología.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm transition-hover text-center p-4">
+                        <div class="text-primary mb-3"><i class="fas fa-print fa-3x"></i></div>
+                        <h4 class="fw-bold">Sellos Automáticos</h4>
+                        <p class="text-muted small">Prácticos y duraderos. El estándar para profesionales y oficinas.</p>
+                        <a href="#contacto" class="btn btn-outline-primary mt-auto">Consultar</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm transition-hover text-center p-4" style="border-top-color: var(--school-yellow) !important;">
+                        <div class="text-warning mb-3"><i class="fas fa-apple-alt fa-3x"></i></div>
+                        <h4 class="fw-bold">Sellos Escolares</h4>
+                        <p class="text-muted small">¡Identificá todo! Cuadernos, libros y etiquetas con estilo.</p>
+                        <a href="#kit-escolar" class="btn btn-outline-warning mt-auto">Ver Diseños</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm transition-hover text-center p-4">
+                        <div class="text-success mb-3"><i class="fas fa-tree fa-3x"></i></div>
+                        <h4 class="fw-bold">Sellos de Madera</h4>
+                        <p class="text-muted small">El toque artesanal y clásico para eventos o packaging.</p>
+                        <a href="#contacto" class="btn btn-outline-success mt-auto">Consultar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kit-escolar" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center bg-white shadow rounded-4 overflow-hidden mx-0">
+                <div class="col-lg-6 p-0">
+                    <div id="carouselKitEscolar" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active h-100">
+                                <img src="images/selloescolar.jpeg" class="d-block w-100 h-100" alt="Sello Escolar 1" style="object-fit: cover;">
+                            </div>
+                            <div class="carousel-item h-100">
+                                <img src="images/sellos1.jpeg" class="d-block w-100 h-100" alt="Sello Escolar 2" style="object-fit: cover;">
+                            </div>
+                            <div class="carousel-item h-100">
+                                <img src="images/sellos2.jpeg" class="d-block w-100 h-100" alt="Sello Escolar 3" style="object-fit: cover;">
+                            </div>
+                            <div class="carousel-item h-100">
+                                <img src="images/sellos3.png" class="d-block w-100 h-100" alt="Sello Escolar 4" style="object-fit: cover;">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselKitEscolar" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselKitEscolar" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6 p-5">
+                    <span class="badge bg-danger mb-2">MÁS VENDIDO</span>
+                    <h2 class="fw-bold mb-3">Sello escolar 2026</h2>
+                    <ul class="list-unstyled mb-4">
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 1 Sello automático personalizado</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Tinta indeleble para ropa</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Ideal para uniformes y cuadernos</li>
+                    </ul>
+                    <a href="https://wa.me/+5491138092992?text=Hola%20quiero%20el%20Kit%20Escolar" class="btn btn-success btn-lg w-100 shadow">
+                        <i class="fab fa-whatsapp me-2"></i> PEDIR POR WHATSAPP
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-5 bg-white">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <h2 class="fw-bold">Contactanos</h2>
+                    <p class="text-muted">Atención personalizada para particulares y empresas.</p>
+                    <p><i class="fas fa-phone text-primary me-2"></i> +54 9 11 3809-2992</p>
+                    <div class="mt-4">
+                        <a href="#" class="btn btn-dark btn-sm rounded-circle me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="btn btn-dark btn-sm rounded-circle me-2"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <form action="https://formspree.io/f/xbdakzel" method="POST" id="contactForm" class="card p-4 border-0 shadow-sm">
+                        
+                        <input type="hidden" name="_language" value="es">
+                        <input type="hidden" name="_subject" value="Nueva consulta desde la web 2026">
+                        
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="visually-hidden">Nombre</label>
+                                <input type="text" name="nombre" class="form-control" placeholder="Nombre" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="visually-hidden">Email</label>
+                                <input type="email" name="email" class="form-control" placeholder="Email" required>
+                            </div>
+                            <div class="col-12">
+                                <select name="tipo_pedido" class="form-select">
+                                    <option value="Pedido Particular">Pedido Particular</option>
+                                    <option value="Ventas Mayoristas">Ventas Mayoristas</option>
+                                    <option value="Escuelas">Consulta Escolar</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <textarea name="mensaje" class="form-control" rows="4" placeholder="Tu mensaje..." required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" id="form-button" class="btn btn-primary w-100 py-2 fw-bold">ENVIAR CONSULTA</button>
+                            </div>
+                            <div class="col-12">
+                                <p id="form-status" class="text-center mt-3 fw-bold"></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Preguntas Frecuentes</h2>
+            <div class="accordion mx-auto" id="faqAccordion" style="max-width: 800px;">
+                <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button fw-bold" data-bs-toggle="collapse" data-bs-target="#f1">¿Cuánto demoran?</button></h2>
+                    <div id="f1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Entre 24 y 48 horas hábiles una vez confirmado el diseño.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#f2">¿Hacen envíos?</button></h2>
+                    <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Sí, enviamos a todo el país vía Correo Argentino y mensajería en CABA/GBA.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4 text-center">
+        <div class="container">
+            <p class="mb-0">&copy; <span id="year"></span> 2026.com.ar - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/+5491138092992" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Botón hamburguesa -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Links -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="#hero">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="#portafolio">Portafolio</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-        <li class="nav-item"><a class="nav-link" href="cv-generator.html">Generar CV</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+    <script>
+        // 1. Actualizar año automáticamente
+        document.getElementById("year").textContent = new Date().getFullYear();
 
-<section id="inicio" class="hero">
-    <div class="container">
-        <h1 class="display-4 fw-bold">Diseñamos el futuro, hoy</h1>
-        <p class="lead">Páginas web modernas, rápidas y efectivas para que tu negocio esté listo para el 2026.</p>
-        <a href="#contacto" class="btn btn-lg btn-light mt-3">Solicita tu página</a>
-    </div>
-</section>
+        // 2. Manejo del formulario Formspree sin recargar la página (AJAX)
+        var form = document.getElementById("contactForm");
+        
+        async function handleSubmit(event) {
+            event.preventDefault(); // Evita que la página se refresque
+            var status = document.getElementById("form-status");
+            var btn = document.getElementById("form-button");
+            var data = new FormData(event.target);
+            
+            // Estado Cargando
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+            btn.disabled = true;
 
-<section id="servicios" class="py-5 services">
-    <div class="container">
-        <h2 class="text-center mb-4">Nuestros Servicios</h2>
-        <div class="row text-center">
-            <div class="col-md-4">
-                <i class="bi bi-laptop"></i>
-                <h4 class="mt-3">Diseño Web Personalizado</h4>
-                <p>Desarrollamos sitios a medida, adaptados a tu identidad de marca.</p>
-            </div>
-            <div class="col-md-4">
-                <i class="bi bi-cart"></i>
-                <h4 class="mt-3">Tiendas Online</h4>
-                <p>Plataformas de e-commerce fáciles de usar y seguras.</p>
-            </div>
-            <div class="col-md-4">
-                <i class="bi bi-bar-chart"></i>
-                <h4 class="mt-3">Optimización SEO</h4>
-                <p>Mejoramos tu visibilidad en Google para atraer más clientes.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="portafolio" class="py-5 portfolio bg-light">
-    <div class="container">
-        <h2 class="text-center mb-4">Portafolio</h2>
-        <div class="row g-4">
-            <div class="col-md-4"><img src="img/487-600x400.jpg" alt="Campo con hierbas silvestres" class="img-fluid"></div>
-            <div class="col-md-4"><img src="img/500-600x400.jpg" alt="Rascacielos bajo el cielo" class="img-fluid"></div>
-            <div class="col-md-4"><img src="img/579-600x400.jpg" alt="Ciudad iluminada de noche" class="img-fluid"></div>
-        </div>
-    </div>
-</section>
-
-<section id="precios" class="py-5">
-    <div class="container">
-        <h2 class="text-center mb-4">Planes y Precios</h2>
-        <div class="row text-center">
-            <div class="col-md-4">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <h4>Plan Básico</h4>
-                        <p class="display-6">desde <br>$20000 al mes</p>
-                        <ul class="list-unstyled">
-                            <li>1 página</li>
-                            <li>Hosting y dominio 1 año</li>
-                            <li>Diseño adaptable</li>
-                        </ul>
-                        <a href="#contacto" class="btn btn-primary">Elegir</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card shadow-sm border-primary">
-                    <div class="card-body">
-                        <h4>Plan Profesional</h4>
-                        <p class="display-6">desde <br>$40000 al mes</p>
-                        <ul class="list-unstyled">
-                            <li>Hasta 5 páginas</li>
-                            <li>Hosting y dominio 1 año</li>
-                            <li>Optimización SEO</li>
-                        </ul>
-                        <a href="#contacto" class="btn btn-primary">Elegir</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <h4>Plan Premium</h4>
-                        <p class="display-6">desde <br>$80000 al mes</p>
-                        <ul class="list-unstyled">
-                            <li>Páginas ilimitadas</li>
-                            <li>Hosting y dominio 1 año</li>
-                            <li>Soporte prioritario</li>
-                        </ul>
-                        <a href="#contacto" class="btn btn-primary">Elegir</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="contacto" class="py-5 bg-light">
-  <div class="container">
-    <h2 class="text-center mb-4">Contacto</h2>
-    
-    <form action="https://formspree.io/f/mblkeylz" method="POST" class="mx-auto form-box" novalidate aria-labelledby="contacto-titulo">
-      
-      <!-- Nombre -->
-      <div class="mb-3">
-        <label for="nombre" class="form-label">Nombre</label>
-        <input 
-          type="text" 
-          id="nombre" 
-          class="form-control" 
-          name="nombre" 
-          required 
-          aria-required="true" 
-          placeholder="Escribe tu nombre" 
-          aria-describedby="error-nombre">
-        <div id="error-nombre" class="invalid-feedback" role="alert">
-          Por favor introduce tu nombre.
-        </div>
-      </div>
-
-      <!-- Correo -->
-      <div class="mb-3">
-        <label for="correo" class="form-label">Correo</label>
-        <input 
-          type="email" 
-          id="correo" 
-          class="form-control" 
-          name="correo" 
-          required 
-          aria-required="true" 
-          placeholder="ejemplo@correo.com" 
-          aria-describedby="error-correo">
-        <div id="error-correo" class="invalid-feedback" role="alert">
-          Introduce un correo válido.
-        </div>
-      </div>
-
-      <!-- Mensaje -->
-      <div class="mb-3">
-        <label for="mensaje" class="form-label">Mensaje</label>
-        <textarea 
-          id="mensaje" 
-          class="form-control" 
-          name="mensaje" 
-          rows="4" 
-          required 
-          aria-required="true" 
-          placeholder="Escribe tu mensaje" 
-          aria-describedby="error-mensaje"></textarea>
-        <div id="error-mensaje" class="invalid-feedback" role="alert">
-          El mensaje no puede estar vacío.
-        </div>
-      </div>
-
-      <div id="form-message" class="mb-3"></div>
-      <!-- Botón -->
-      <button type="submit" class="btn btn-primary w-100">Enviar</button>
-    </form>
-  </div>
-</section>
-
-
-<footer class="text-center">
-    <p class="mb-0">&copy; 2025 2026.com.ar - Todos los derechos reservados</p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const form = document.querySelector("form");
-  const messageBox = document.getElementById("form-message");
-
-  function showMessage(type, text) {
-    const alert = document.createElement("div");
-    alert.className = `alert alert-${type} fade show`;
-    alert.setAttribute("role", "alert");
-    alert.textContent = text;
-    messageBox.innerHTML = "";
-    messageBox.appendChild(alert);
-    setTimeout(() => {
-      alert.classList.remove("show");
-      alert.classList.add("fade");
-      setTimeout(() => {
-        alert.remove();
-      }, 500);
-    }, 4000); // desaparece después de 4s
-  }
-
-  form.addEventListener("submit", async function(event) {
-    event.preventDefault();
-
-    const formData = new FormData(form);
-    const action = form.getAttribute("action");
-
-    try {
-      const response = await fetch(action, {
-        method: "POST",
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      });
-
-      if (response.ok) {
-        showMessage("success", "¡Mensaje enviado con éxito! ✅");
-        form.reset();
-      } else {
-        showMessage("danger", "Hubo un problema al enviar el formulario ❌");
-      }
-    } catch (error) {
-      showMessage("danger", "Error de red ❌");
-    }
-  });
-});
-</script>
-
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    status.innerHTML = "¡Gracias! Tu mensaje ha sido enviado correctamente.";
+                    status.className = "text-center mt-3 fw-bold text-success";
+                    form.reset(); // Limpia el formulario
+                    btn.innerHTML = "ENVIAR CONSULTA";
+                    btn.disabled = false;
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                        } else {
+                            status.innerHTML = "Hubo un problema al enviar el mensaje.";
+                        }
+                        status.className = "text-center mt-3 fw-bold text-danger";
+                        btn.innerHTML = "INTENTAR DE NUEVO";
+                        btn.disabled = false;
+                    })
+                }
+            }).catch(error => {
+                status.innerHTML = "Hubo un error de conexión.";
+                status.className = "text-center mt-3 fw-bold text-danger";
+                btn.innerHTML = "INTENTAR DE NUEVO";
+                btn.disabled = false;
+            });
+        }
+        form.addEventListener("submit", handleSubmit);
+    </script>
 </body>
 </html>
