@@ -91,6 +91,65 @@
         .accordion-button:not(.collapsed) { background-color: #e7f1ff; color: var(--primary-blue); }
         .accordion-item { border-radius: 10px !important; margin-bottom: 10px; border: 1px solid #eee; overflow: hidden; }
 
+        /* Buscador en Navbar */
+        .navbar-search {
+            position: relative;
+        }
+        .navbar-search .form-control {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #fff;
+            border-radius: 50px;
+            padding: 6px 40px 6px 16px;
+            width: 200px;
+            transition: all 0.3s ease;
+        }
+        .navbar-search .form-control::placeholder {
+            color: rgba(255,255,255,0.5);
+        }
+        .navbar-search .form-control:focus {
+            background: rgba(255,255,255,0.15);
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(0,86,179,0.25);
+            width: 260px;
+            outline: none;
+        }
+        .navbar-search .search-btn {
+            position: absolute;
+            right: 4px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: rgba(255,255,255,0.6);
+            cursor: pointer;
+            padding: 4px 10px;
+            transition: color 0.2s;
+        }
+        .navbar-search .search-btn:hover {
+            color: #fff;
+        }
+        /* Ocultar cards sin match */
+        .card-hidden {
+            display: none !important;
+        }
+        /* Resaltar cards con match */
+        .card-highlight {
+            border-top: 5px solid var(--primary-blue) !important;
+            box-shadow: 0 0 20px rgba(0,86,179,0.2) !important;
+        }
+        /* Mensaje sin resultados */
+        .no-results-msg {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+            color: #6c757d;
+            font-size: 1.1rem;
+        }
+        .no-results-msg.active {
+            display: block;
+        }
+
         /* Corrección Carrusel para Móviles */
         .carousel-inner { height: 400px; }
         
@@ -100,6 +159,13 @@
             }
             .hero-container {
                 height: 80vh;
+            }
+            .navbar-search .form-control {
+                width: 100%;
+                margin-top: 8px;
+            }
+            .navbar-search .form-control:focus {
+                width: 100%;
             }
         }
     </style>
@@ -116,10 +182,18 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#kit-escolar">Sello escolar</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <div class="navbar-search">
+                            <input type="text" id="navSearchInput" class="form-control" placeholder="Buscar productos..." autocomplete="off">
+                            <button class="search-btn" type="button" aria-label="Buscar">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </li>
                     <li class="nav-item d-none d-lg-block">
                         <a href="https://wa.me/+5491138092992" class="btn btn-outline-primary ms-3">WhatsApp</a>
                     </li>
@@ -173,6 +247,10 @@
                         <a href="#contacto" class="btn btn-outline-success mt-auto">Consultar</a>
                     </div>
                 </div>
+            </div>
+            <div class="no-results-msg" id="noResultsMsg">
+                <i class="fas fa-search fa-2x mb-2"></i>
+                <p>No se encontraron productos que coincidan con tu búsqueda.</p>
             </div>
         </div>
     </section>
@@ -355,6 +433,59 @@
             });
         }
         form.addEventListener("submit", handleSubmit);
+
+        // 3. Buscador: filtrar productos en tiempo real
+        (function() {
+            var searchInput = document.getElementById('navSearchInput');
+            var productCards = document.querySelectorAll('#productos .col-md-4');
+            var kitSection = document.getElementById('kit-escolar');
+            var noResultsMsg = document.getElementById('noResultsMsg');
+
+            searchInput.addEventListener('input', function() {
+                var query = this.value.toLowerCase().trim();
+                var visibleCount = 0;
+
+                // Filtrar tarjetas de productos
+                productCards.forEach(function(col) {
+                    var card = col.querySelector('.card');
+                    var title = card.querySelector('h4') ? card.querySelector('h4').textContent.toLowerCase() : '';
+                    var desc = card.querySelector('p') ? card.querySelector('p').textContent.toLowerCase() : '';
+                    var text = title + ' ' + desc;
+
+                    if (query === '' || text.indexOf(query) !== -1) {
+                        col.classList.remove('card-hidden');
+                        card.classList.toggle('card-highlight', query !== '');
+                        visibleCount++;
+                    } else {
+                        col.classList.add('card-hidden');
+                        card.classList.remove('card-highlight');
+                    }
+                });
+
+                // Filtrar sección kit escolar
+                if (kitSection) {
+                    var kitText = kitSection.textContent.toLowerCase();
+                    if (query === '' || kitText.indexOf(query) !== -1) {
+                        kitSection.style.display = '';
+                        visibleCount++;
+                    } else {
+                        kitSection.style.display = 'none';
+                    }
+                }
+
+                // Mostrar/ocultar mensaje sin resultados
+                if (query !== '' && visibleCount === 0) {
+                    noResultsMsg.classList.add('active');
+                } else {
+                    noResultsMsg.classList.remove('active');
+                }
+
+                // Si hay búsqueda, scrollear a productos
+                if (query !== '') {
+                    document.getElementById('productos').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        })();
     </script>
 </body>
 </html>
