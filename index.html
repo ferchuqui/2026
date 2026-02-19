@@ -13,14 +13,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MGL2TKBP');</script>
-<!-- End Google Tag Manager --> 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TU_ID_AQUI"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
+      gtag('config', 'G-TU_ID_AQUI');
+    </script>
     <style>
         :root {
             --primary-blue: #0056b3;
@@ -37,7 +37,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .hero-container {
             position: relative;
             height: 90vh;
-            /* Degradado oscuro sobre la imagen para que se lea el texto */
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
                         url('images/sellos.jpeg');
             background-size: cover;
@@ -96,27 +95,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         @media (max-width: 768px) {
             .carousel-inner { 
-                height: 300px; /* Altura ajustada para celulares */
+                height: 300px;
             }
             .hero-container {
-                height: 80vh; /* Un poco más corto en móviles */
+                height: 80vh;
             }
         }
     </style>
 </head>
 <body>
 
-    
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGL2TKBP"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
         <div class="container">
             <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
-                <img src="images/logo.png" alt="Logo" height="30" class="me-2">
+                <img src="images/logo.png" alt="Logo 2026 Fábrica de Sellos" height="30" class="me-2">
                 2026<span class="text-primary">.COM.AR</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -191,16 +183,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div id="carouselKitEscolar" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active h-100">
-                                <img src="images/selloescolar.jpeg" class="d-block w-100 h-100" alt="Sello Escolar 1" style="object-fit: cover;">
+                                <img src="images/selloescolar.jpeg" class="d-block w-100 h-100" alt="Sello automático personalizado para ropa y útiles" style="object-fit: cover;">
                             </div>
                             <div class="carousel-item h-100">
-                                <img src="images/sellos1.jpeg" class="d-block w-100 h-100" alt="Sello Escolar 2" style="object-fit: cover;">
+                                <img src="images/sellos1.jpeg" class="d-block w-100 h-100" alt="Kit de sellos escolares con tinta indeleble" style="object-fit: cover;">
                             </div>
                             <div class="carousel-item h-100">
-                                <img src="images/sellos2.jpeg" class="d-block w-100 h-100" alt="Sello Escolar 3" style="object-fit: cover;">
+                                <img src="images/sellos2.jpeg" class="d-block w-100 h-100" alt="Sellos con nombre para cuadernos y etiquetas" style="object-fit: cover;">
                             </div>
                             <div class="carousel-item h-100">
-                                <img src="images/sellos3.png" class="d-block w-100 h-100" alt="Sello Escolar 4" style="object-fit: cover;">
+                                <img src="images/sellos3.png" class="d-block w-100 h-100" alt="Diseños variados de sellos infantiles" style="object-fit: cover;">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselKitEscolar" data-bs-slide="prev">
@@ -343,7 +335,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     btn.disabled = false;
                 } else {
                     response.json().then(data => {
-                        if (Object.hasOwn(data, 'errors')) {
+                        // CORRECCIÓN COMPATIBILIDAD: Usamos hasOwnProperty
+                        if (data.hasOwnProperty('errors')) {
                             status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
                         } else {
                             status.innerHTML = "Hubo un problema al enviar el mensaje.";
